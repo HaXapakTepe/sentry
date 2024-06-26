@@ -1,0 +1,46 @@
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  @include fluid(padding-top, 15px, 12px);
+  @include fluid(padding-bottom, 15px, 12px);
+  padding-left: 16px;
+  padding-right: 16px;
+  white-space: nowrap;
+  background-color: #0F62FE;
+  color: #fff;
+  transition: background-color 0.23s ease-in-out,
+    color 0.23s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    color: #0F62FE;
+    background-color: #fff;
+
+    .btn__icon {
+      svg {
+        path {
+          fill: #0F62FE;
+        }
+      }
+    }
+  }
+
+  &--header {
+    @include fluid(padding-top, 7px, 12px);
+    @include fluid(padding-bottom, 7px, 12px);
+  }
+
+  &--green {
+    background-color: #24A148;
+    pointer-events: none;
+  }
+
+  &__icon {
+    svg {
+      path {
+        transition: fill .23s ease-in-out;
+      }
+    }
+  }
+}

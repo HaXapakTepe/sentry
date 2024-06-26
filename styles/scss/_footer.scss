@@ -1,0 +1,25 @@
+.footer {
+  border-top: 1px solid #525252;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    @include fluid(margin-top, 33px, 50px);
+    @include fluid(margin-bottom, 33px, 50px);
+  }
+
+  &__text {
+    text-align: right;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    &__text {
+      max-width: 230px;
+      font-size: 10px;
+    }
+  }
+}

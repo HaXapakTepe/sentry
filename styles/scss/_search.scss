@@ -1,0 +1,44 @@
+.search {
+  width: 100%;
+
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 9px 16px;
+    background-color: #393939;
+    border: 2px solid #fff;
+    transition: border-color .23s ease-in-out;
+    cursor: text;
+
+    &:hover,
+    &:focus-within {
+      border-color: #0F62FE;
+
+      .search__icon {
+        svg {
+          path {
+            fill: #0F62FE;
+          }
+        }
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    font-size: 14px;
+    line-height: 18px;
+    color: #F4F4F4;
+  }
+
+  &__icon {
+    cursor: pointer;
+
+    svg {
+      path {
+        transition: fill .23s ease-in-out;
+      }
+    }
+  }
+}
