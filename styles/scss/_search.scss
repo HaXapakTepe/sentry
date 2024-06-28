@@ -30,6 +30,26 @@
     font-size: 14px;
     line-height: 18px;
     color: #F4F4F4;
+
+    &::-webkit-input-placeholder {
+      color: #F4F4F4;
+    }
+
+    &::-moz-placeholder {
+      color: #F4F4F4;
+    }
+
+    &:-ms-input-placeholder {
+      color: #F4F4F4;
+    }
+
+    &::-ms-input-placeholder {
+      color: #F4F4F4;
+    }
+
+    &::placeholder {
+      color: #F4F4F4;
+    }
   }
 
   &__icon {

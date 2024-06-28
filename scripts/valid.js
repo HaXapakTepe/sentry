@@ -87,5 +87,11 @@ window.addEventListener('DOMContentLoaded', () => {
 		})
 	})
 
+	formNameInput.addEventListener('focus', () => {
+		if (formNameInput.value == '') {
+			formNameInput.value = '@'
+		}
+	})
+
 	form?.addEventListener('submit', submitForm)
 })

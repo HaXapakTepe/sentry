@@ -11,7 +11,7 @@ if (isset($_POST['mail'])) {
     $email = $_POST['email'];
 }
 
-$verify = mail("sentry@sentry.ru", "Заявка с сайта", "ник в Telegeram: " . $name . "\r\n" . "Почтовый адрес: " . $email . "\r\n", "From: sentry@sentry.ru");
+$verify = mail("sales@sentrytag.tech", "Заявка с сайта", "Ник в Telegeram: " . $name . "\r\n" . "Почтовый адрес: " . $email . "\r\n", "From: sales@sentrytag.tech");
 
 header("Location: /");
 exit;

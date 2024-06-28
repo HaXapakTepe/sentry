@@ -13,6 +13,7 @@
 
 <body>
 	<div class="wrapper">
+
 		<header class="header">
 			<div class="container">
 				<div class="header__inner">
@@ -39,14 +40,19 @@
 						<div class="promo__inner">
 							<p class="promo__title">
 								<span class="promo__logo logo">
-									<img class="logo__img"  src="./assets/images/logo.svg" alt="" />
+									<img class="logo__img" src="./assets/images/logo.svg" alt="" />
 								</span>
 								это надежный помощник в анализе сообщений Telegram с использованием ИИ
 							</p>
 							<div class="promo__video">
-								<iframe width="100%" height="100%" src="https://www.youtube.com/embed/2_92EXPHSpc"
-									srcdoc="<style>*{margin:0;padding:0;box-sizing:border-box;font-size:0}img{display:block;position:absolute;top:0;left:0;width:100%;height:100%}a:hover:after{opacity:.8}a:after,a:before{position:absolute;content:'';inset:0}a:after{background:url(./assets/images/icons/play.svg) no-repeat center / 60px}a:before{background:rgba(0,0,0,.5)}</style><a href='https://www.youtube-nocookie.com/embed/2_92EXPHSpc?autoplay=1'><img src='./assets/images/content/bg.png' loading='lazy' decoding='async' alt='Видео с YouTube'></a>"
-									loading="lazy" allowfullscreen></iframe>
+								<img class="promo__video-bg" src="./assets/images/content/bg.png" alt="">
+								<video class="promo__video-player" preload="auto" controls>
+									<source src="./assets/video/1.mp4" type="video/mp4">
+									</source>
+									<source src="./assets/video/1.webm" type="video/webm">
+									</source>
+								</video>
+								<img class="promo__video-play" src="./assets/images/icons/play.svg" alt="">
 							</div>
 						</div>
 					</div>
@@ -63,7 +69,7 @@
 								</p>
 								<form class="search" action="">
 									<label class="search__label">
-										<input class="search__input" type="search" type="text">
+										<input class="search__input" type="search" type="text" placeholder="Я продаю экскурсии. Найди мне клиентов!">
 										<button class="search__icon">
 											<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" clip-rule="evenodd"
@@ -81,7 +87,7 @@
 								<p class="content__item-title">
 									Получайте уведомления 24/7
 								</p>
-								<img class="content__item-img" src="./assets/images/content/1.png" alt="">
+								<img class="content__item-img" src="./assets/images/content/1.svg" alt="">
 								<p class="content__item-text">
 									Мониторинг сообщений в группах осуществляется непрерывно, пока запущен проект
 								</p>
