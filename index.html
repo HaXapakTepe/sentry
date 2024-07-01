@@ -69,7 +69,8 @@
 								</p>
 								<form class="search" action="">
 									<label class="search__label">
-										<input class="search__input" type="search" type="text" placeholder="Я продаю экскурсии. Найди мне клиентов!">
+										<input class="search__input" type="search" type="text"
+											placeholder="Я продаю экскурсии. Найди мне клиентов!">
 										<button class="search__icon">
 											<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" clip-rule="evenodd"
@@ -155,11 +156,17 @@
 									Если не достучимся через Telegram, то напишем на потчу
 								</p>
 								<button class="form__btn btn">
-									Свяжитесь со мной
+									<p class="form__btn-text">
+										Свяжитесь со мной
+									</p>
 									<i class="btn__icon">
 										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path
 												d="M13.7249 7.555L2.72494 2.055C2.63873 2.01189 2.54189 1.99461 2.44608 2.00526C2.35028 2.0159 2.25959 2.05401 2.18494 2.115C2.11365 2.17475 2.06045 2.2532 2.0313 2.34153C2.00215 2.42985 1.99822 2.52456 2.01994 2.615L3.49994 8L1.99994 13.37C1.97956 13.4455 1.97718 13.5248 1.99299 13.6014C2.00881 13.678 2.04239 13.7499 2.09102 13.8111C2.13965 13.8724 2.20199 13.9214 2.27301 13.9542C2.34403 13.987 2.42176 14.0027 2.49994 14C2.57821 13.9995 2.65528 13.9807 2.72494 13.945L13.7249 8.445C13.8068 8.40304 13.8756 8.3393 13.9236 8.26078C13.9716 8.18226 13.997 8.09203 13.997 8C13.997 7.90798 13.9716 7.81774 13.9236 7.73923C13.8756 7.66071 13.8068 7.59696 13.7249 7.555ZM3.27494 12.555L4.37994 8.5H8.99994V7.5H4.37994L3.27494 3.445L12.3799 8L3.27494 12.555Z"
+												fill="white" />
+										</svg>
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M6.5 12L2 7.49997L2.707 6.79297L6.5 10.5855L13.293 3.79297L14 4.49997L6.5 12Z"
 												fill="white" />
 										</svg>
 									</i>
@@ -185,48 +192,9 @@
 			</div>
 		</footer>
 
-		<div class="success">
-			<div class="success__inner">
-				<div class="form">
-					<p class="form__title">
-						Отправлено
-					</p>
-					<div class="form__inner">
-						<div class="form__inner-box">
-							<label class="form__label">
-								Ваш ник в Telegeram
-								<input class="form__input" name="name" type="text" disabled>
-								<span class="form__span">
-									Убедитесь, что вы доступны для поиска
-								</span>
-							</label>
-							<label class="form__label">
-								Почтовый адрес
-								<input class="form__input" name="email" type="email" disabled>
-							</label>
-						</div>
-						<div class="form__inner-bot">
-							<p class="form__text">
-								Мы Вам напишем по одному из предоставленных каналов связи.
-								<br>
-								Если не достучимся через Telegram, то напишем на потчу
-							</p>
-							<div class="form__btn btn btn--green">
-								Успешно получена
-								<i class="btn__icon">
-									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M6.5 12L2 7.49997L2.707 6.79297L6.5 10.5855L13.293 3.79297L14 4.49997L6.5 12Z"
-											fill="white" />
-									</svg>
-								</i>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 	<script src="./scripts/valid.js"></script>
 	<script src="./scripts/scripts.js"></script>
 </body>

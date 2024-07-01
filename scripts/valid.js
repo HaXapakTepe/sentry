@@ -1,12 +1,13 @@
-window.addEventListener('DOMContentLoaded', () => {
+$(document).ready(function () {
 	const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
 	const symbol = /^@/
 
-	const success = document.querySelector('.success')
-
+	const title = document.querySelector('.form__title')
 	const form = document.querySelector('#form')
 	const formNameInput = form?.querySelector('#form-name-input')
 	const formEmailInput = form?.querySelector('#form-email-input')
+	const btn = form?.querySelector('.form__btn')
+	const btnText = form?.querySelector('.form__btn-text')
 
 	const checkInputValidity = input => input.value
 
@@ -21,7 +22,11 @@ window.addEventListener('DOMContentLoaded', () => {
 			}
 		})
 
-		if (!symbol.test(formNameInput.value)) {
+		if (
+			!symbol.test(formNameInput.value) ||
+			formNameInput.value.length < 2 ||
+			formNameInput.value.length > 30
+		) {
 			formNameInput.classList.add('form__input--invalid')
 			return
 		} else {
@@ -35,33 +40,28 @@ window.addEventListener('DOMContentLoaded', () => {
 			formEmailInput.classList.remove('form__input--invalid')
 		}
 
-		fetch('/send.php', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
+		$.ajax({
+			url: '/send.php',
+			type: 'POST',
+			data: {
 				name: formNameInput.value,
 				email: formEmailInput.value,
-			}),
-		})
-			.then(response => response.text())
-			.then(data => {
-				const input = success.querySelectorAll('.form__input')
-				success.classList.add('success--visible')
-				if (success.classList.contains('success--visible')) {
-					input[0].value = formNameInput.value
-					input[1].value = formEmailInput.value
+			},
+			cache: false,
+			dataType: 'html',
+			success: function (data) {
+				title.textContent = 'Отправлено!'
+				btn.classList.add('btn--green')
+				btnText.textContent = 'Успешно получена'
+				setTimeout(() => {
 					formNameInput.value = ''
 					formEmailInput.value = ''
-					setTimeout(() => {
-						success.classList.remove('success--visible')
-					}, 3000)
-				}
-			})
-			.catch(error => {
-				console.error('Error:', error)
-			})
+					title.textContent = 'Получить доступ'
+					btn.classList.remove('btn--green')
+					btnText.textContent = 'Свяжитесь со мной'
+				}, 3000)
+			},
+		})
 	}
 
 	document.querySelectorAll('.form-input-name').forEach(input => {

@@ -34,12 +34,28 @@
   &--green {
     background-color: #24A148;
     pointer-events: none;
+
+    .btn__icon {
+      svg {
+        &:first-child {
+          display: none;
+        }
+
+        &:last-child {
+          display: flex;
+        }
+      }
+    }
   }
 
   &__icon {
     svg {
       path {
         transition: fill .23s ease-in-out;
+      }
+
+      &:last-child {
+        display: none;
       }
     }
   }
